@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
+  background: #646464;
 }
 
 .container {
@@ -25,7 +26,7 @@ body {
 
 h1 {
   margin: 0;
-  color: #333333;
+  color: #fff;
 }
 
 .search {
@@ -35,20 +36,26 @@ h1 {
   &__input {
     width: 300px;
     height: 32px;
+    background-color: transparent;
     border: none;
     margin-right: 5px;
     padding: 5px;
-    color: #333;
-    border-bottom: 1px solid rgb(172, 172, 172);
+    color: #fff;
+    border-bottom: 1px solid rgb(68, 68, 68);
     transition: border-bottom .3s;
+    position: relative;
+  }
+
+  &__input::placeholder {
+    color: darken(#fff, 30%);
   }
 
   &__input:focus {
+    border-bottom: 1px solid rgb(172, 172, 172);
     outline: none;
-    border-bottom: 1px solid rgb(68, 68, 68);
 
     &::placeholder {
-      color: rgb(70, 68, 68);
+      color: #fff;
     }
   }
 
